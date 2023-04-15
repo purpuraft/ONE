@@ -1,0 +1,31 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA</h1>
+<br>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br><hr><br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	var anio = 2023;
+	var fnac1 = 2013;
+	var fnac2 = 2014;
+	var fnac3 = 2015;
+	//var salto = "<br><br>";
+
+	imprimir("Esperanza tiene "+ (anio - 2013) + " años")
+	imprimir("Ana tiene "+ (anio - 2014) + " años")
+	imprimir("Miguel tiene "+ (anio - 2015) + " años")
+
+	imprimir("El promedio de las edades es: "+ Math.round(((anio-fnac1)+(anio-fnac2)+(anio-fnac3))/3));
+
+</script>
