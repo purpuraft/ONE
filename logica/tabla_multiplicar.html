@@ -1,0 +1,33 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA TABLA DE MULTIPLICAR</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	var multiplicador = 1;
+	var base = parseInt(prompt("¿De que tabla vamos a calcular?: "));
+
+/*
+	while (multiplicador <= 10) {
+		imprimir( base + " X " + multiplicador + " = " + base*multiplicador);
+		multiplicador = multiplicador + 1;
+	}
+*/
+
+	for(multiplicador = 1; multiplicador <=10; multiplicador++){
+		imprimir( base + " X " + multiplicador + " = " + base*multiplicador);
+			
+	}
+
+</script>

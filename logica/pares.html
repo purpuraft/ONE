@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA PARES</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	var contador = 2;
+
+	while (contador <= 100) {
+		
+		imprimir(contador);
+		contador = contador + 2;
+	}
+
+</script>

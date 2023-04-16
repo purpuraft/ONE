@@ -1,0 +1,32 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA TABLA DE MULTIPLICAR</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	var contador = 1;
+	var edadTotal = 0;
+	var numeroMiembros = parseInt(prompt("¿Cuantos miembros hay en la familia?: "));
+
+	while (contador <= numeroMiembros) {
+		
+		edad = parseInt(prompt("Ingrese edad: "));
+		edadTotal = edadTotal + edad;
+		contador++;
+	}
+
+	promedio = edadTotal/numeroMiembros;
+	imprimir( "Promedio es: " + promedio);
+
+</script>

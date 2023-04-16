@@ -1,0 +1,39 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA JUEGO ADIVINA EL NUMERO</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+
+	var numeroPensado = Math.round(Math.random() * 10) ;
+	var intentos = 3;
+	var contador = 1;
+
+	while (contador <= intentos) {
+		
+		var numeroLanzado = parseInt(prompt("Adivina qué número entre 0 y 10 estoy pensando"));
+		if (numeroPensado == numeroLanzado) {
+			alert("Acertaste! usaste " + intentos + " contador");
+			break;
+		}
+		else {
+			alert("Fallaste!" );
+		}
+		contador++;
+	}
+
+	if (intentos == 3) {
+		imprimir("El numero era " + numeroPensado)
+	}
+</script>

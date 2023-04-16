@@ -1,0 +1,29 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA JUEGO ADIVINA EL NUMERO</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	for(var lineas = 1; lineas <= 3; lineas++) {
+		for(var columnas = 1; columnas <= 10; columnas++ ){
+			document.write("*")
+		}
+		saltar();
+	}
+
+	saltar();
+	saltar();
+	imprimir("Fin");
+
+</script>

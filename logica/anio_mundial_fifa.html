@@ -1,0 +1,28 @@
+<meta charset = "UTF-8">
+
+<h1>PROGRAMA MUNDIAL EN ESE AÑO</h1>
+
+<script>
+
+// función sin parámetros
+	function saltar(){
+		document.write("<br><br>");
+	}
+
+// funcion con parámetros
+	function imprimir(texto){
+		document.write("<big>"+texto+"</big>");
+		saltar();
+	}
+
+	var anioMundial = 1930;
+	var anioLimite = parseInt(prompt("Calcular hasta el año: "));
+
+	while (anioMundial <= anioLimite) {
+		imprimir("Hubo mundial en el año " + anioMundial);
+		anioMundial = anioMundial + 4;
+	}
+
+	imprimir("Fin");
+
+</script>
