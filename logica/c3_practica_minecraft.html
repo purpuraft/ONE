@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400">
+	
+</canvas>
+<script>
+	
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "darkgreen" //propiedad, recibe un valor
+	pincel.fillRect(200,50,350,300); //función, recibe 2 coordenadas inicio y fin. Y es de arriba a abajo y X de izq a derecha, la segunda coordenada es el tamaño de la base
+	
+	//ojo izquierdo
+	pincel.fillStyle = "black"
+	pincel.fillRect(250,110,90,90);
+
+	//ojo derecho
+	pincel.fillStyle = "black"
+	pincel.fillRect(410,110,90,90);
+
+	//nariz
+	pincel.fillStyle = "black"
+	pincel.fillRect(340,200,70,100);
+
+	//rec 5 (boca izq)
+	pincel.fillStyle = "black"
+	pincel.fillRect(300,240,40,110);
+	
+	//rec 6 (boca der)
+	pincel.fillStyle = "black"
+	pincel.fillRect(410,240,40,110);
+
+</script>
