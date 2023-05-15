@@ -8,6 +8,7 @@
     pincel.fillRect(0, 0, 600, 400);
 
     var colores = ["red","green","blue"];
+    var colorActual = 2;
     
     function diseniarPaleta(x,y,colores){
         for (var i = 0; i < colores.length; i++) {
@@ -15,7 +16,6 @@
             pincel.fillRect(x,y,50,50);
             x = x + 50;
         }
-        
     }
 
     diseniarPaleta(0,0,colores);
@@ -23,16 +23,28 @@
     var puedoDibujar = false;
 
     function dibujarCirculo(evento) {
-
-        if(puedoDibujar) {
-            var x = evento.pageX - pantalla.offsetLeft;
-            var y = evento.pageY - pantalla.offsetTop;
-            pincel.fillStyle = 'blue';
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if (x <= (50*colores.length)+5 && y <= 55){
+            deshabilitarDibujar();
+        }else if(puedoDibujar) {
+            pincel.fillStyle = colores[colorActual];
             pincel.beginPath();
             pincel.arc(x, y, 5, 0, 2 * 3.14);
             pincel.fill();
         }
+    }
 
+    function cambiaColor(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if (x <= 50 && y <= 50){
+            colorActual = 0;
+        } else if (x > 50 && x <= 100 && y <= 50){
+            colorActual = 1;
+        }else if (x > 100 && x <= 150 && y <= 50){
+            colorActual = 2;
+        }
     }
 
     pantalla.onmousemove = dibujarCirculo;
@@ -47,5 +59,5 @@
 
     pantalla.onmousedown = habilitarDibujar;
     pantalla.onmouseup = deshabilitarDibujar;
-
+    pantalla.onclick = cambiaColor;
 </script>
