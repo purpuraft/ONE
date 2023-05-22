@@ -1,63 +1,119 @@
-.titulo-principal{
-	padding-left: 30px;
+header {
+	background-color: #BBBBBB;
+	padding: 20px 0;
 }
 
-#banner{ /* # referenciador hacia un id */
-	width: 100%;
-	align-content: center;
+.caja {
+	width: 940px;
+	position: relative;
+	margin: 0 auto;
 }
 
-.principal{ /* . referenciador a una clase */
-	background: #CCCCCC;
-	padding: 20px;
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
 }
 
-.titulo-centrado{
+nav li{
+	display: inline;
+	margin: 0 0 0 15px;
+	text-align: right;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #c78c19;
+	text-decoration: underline;
+}
+
+.productos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.productos li{
+	display: inline-block;
 	text-align: center;
-}
-
-/*
-h1{
-	text-align: center;
-	height: 150px;
-	border: 10px solid #000000;
-	padding: 20px;
-	margin: 40px; \* espaciado externo del elemento en relación a la página *\
-}
-*/
-p{
-	text-align: center;
-	background: #CCCCCC;
-}
-
-em strong{ /* etiquetas anidadas, este bloque aplicará cuando se encuentre ambas etiquetas juntas en el mismo orden */
-	color: red;
-}
-
-#mision{
-	font-size: 20px;
-}
-
-.diferenciales{
-	background: #FFFFFF;
-	padding: 20px; /* espaciado interno del elemento en relación a su contenido */
-}
-
-h2{
-	text-align: center;
-}
-
-.items{
-	font-style: italic;
-}
-
-ul{
-	display: inline-block; /* ayuda a que las listas no ocupen el 100% de la pantalla y no den salto de linea con cada elemento */
+	width: 30%;
 	vertical-align: top;
-	width: 20%;
-	margin-right: 15%;
+	margin: 0 1%;
+	padding: 30px 20px; /* vertical horizontal */
+	box-sizing: border-box; /* para que no se rebase el tamaño de cada elemento */
+	border: 2px solid #000000; /* width style color */
+	border-radius: 10px; /* supizq supder infder infizq */
 }
 
-.imagenDiferenciales{
+.productos li:hover {
+	border-color: #c78c19;
+}
+
+.productos li:active {
+	border-color: #088c19;
+}
+
+.productos h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.productos li:hover h2 {
+	font-size: 33px;
+}
+
+.producto-descripcion {
+	font-size: 18px;
+}
+
+.producto-precio {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("images/bg.jpg");
+	padding: 40px;
+}
+
+.copyright {
+	color: #ffffff;
+	font-size: 13px;
+	margin: 20px;
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form p {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padron {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
 	width: 50%;
 }
+
+.checkbox {
+	margin: 20px 0;
+}
+
