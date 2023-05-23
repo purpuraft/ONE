@@ -45,7 +45,7 @@ nav a:hover {
 	text-align: center;
 	width: 30%;
 	vertical-align: top;
-	margin: 0 1%;
+	margin: 0 1%; /* arriba-abajo izq-der */
 	padding: 30px 20px; /* vertical horizontal */
 	box-sizing: border-box; /* para que no se rebase el tamaño de cada elemento */
 	border: 2px solid #000000; /* width style color */
@@ -100,7 +100,7 @@ form {
 	margin: 40px 0;
 }
 
-form label, form p {
+form label, form legend {
 	display: block;
 	font-size: 20px;
 	margin: 0 0 10px;
@@ -115,5 +115,39 @@ form label, form p {
 
 .checkbox {
 	margin: 20px 0;
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background: orange;
+	border: none;
+	border-radius: 5px; 
+	transition: 1s all; /* hacer más lenta la transición */
+	cursor: pointer; /* cambiar el cursor */
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2); /* efecto de aumento de tamaño en el elemento */
+/*	transform: rotate(70deg); /* efecto de rotación en el elemento, respeta la última si estan en lineas separadas */
+}
+
+table {
+	margin: 40px 40px;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
 }
 
