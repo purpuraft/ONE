@@ -7,13 +7,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Barbería Alura</title> <!-- Nombre de la pestaña en el navegador -->
 		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="style-home.css">
-		
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body> <!-- las etiquetas de contenido van aqui en el body -->
 		
-			<header>
+		<header>
 				<div class="caja">
 					<h1><img src="images/logo.png" alt="logotipo barbería Alura"></h1>
 					<!--h1 class="titulo-principal">Barbería Alura</h1-->
@@ -25,37 +29,61 @@
 						</ul>
 					</nav>
 				</div>
-			</header>
+		</header>
 		
-		<img id="banner" src="images/banner.jpg" alt="banner principal barbería Alura">
+		<img class="banner" src="images/banner.jpg" alt="banner principal barbería Alura">
 		<main>
 			
-			<div class="principal">
-				<h2 class="titulo-centrado">Sobre nosotros</h2>
+			<section class="principal">
+				<h2 class="titulo-principal">Sobre nosotros</h2>
 
-				<p class="presentacion"><strong>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</strong></p>
+				<img class="utensilios" src="images/utensilios.jpg" alt="utensilios de un barbero">
+
+				<p class="presentacion">Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
 
 				<p id="mision"><em>Nuestra misión es <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes".</strong></em></p>
 
 				<p class="presentacion">Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes. </p>
 
-			</div>
-			<div class="diferenciales">
-				<h3 class="titulo-centrado">Diferenciales</h3>
-				<ul>
-					<li class="items">✔ Atención personalizada</li>
-					<li class="items">✔ Espacio diferenciado </li>
-					<li class="items">✔ Localización</li>
-					<li class="items">✔ Profesionales calificados</li>
-				</ul>
+			</section>
 
-				<img src="images/diferenciales.jpg" class="imagenDiferenciales">
-			</div>
+			<section class="mapa">
+				<h3 class="titulo-principal">Nuestra ubicación</h3>
+				<p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
+
+				<div class="mapa-contenido">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4078422532407!2d-46.63950901867292!3d-23.589701924066887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bd9bb943bf5%3A0x6f642995c970f0fe!2scaelum%20alura!5e0!3m2!1ses-419!2smx!4v1684961283848!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>		
+				</div>
+				
+			</section>
+
+			<section class="diferenciales">
+				<h3 class="titulo-principal">Diferenciales</h3>
+
+				<div class="contenido-diferenciales">
+					<ul class="lista-diferenciales">
+						<li class="items">Atención personalizada a nuestros clientes</li>
+						<li class="items">Espacio diferenciado </li>
+						<li class="items">Localización</li>
+						<li class="items">Profesionales calificados</li>
+						<li class="items">Puntualidad</li>
+						<li class="items">Limpieza</li>
+					</ul><!-- sin espacio para que aplique el inline-block --><img src="images/diferenciales.jpg" class="imagen-diferenciales">
+				</div>
+
+				<div class="video">
+				    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+			</section>
+
 		</main>
 
 	</body>
+
 	<footer>
 		<img src="images/logo-blanco.png" alt="logotipo barbería Alura">
 		<p class="copyright">&copy Copyright Barbería Alura - 2023</p>
 	</footer>
+
 </html>
