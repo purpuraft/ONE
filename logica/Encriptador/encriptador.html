@@ -4,30 +4,37 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Proyecto Encriptador de texto</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Tsukimi+Rounded:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 	
 	<header>
-		<section class="css">
-			
-			<h1>Proyecto Encriptador de texto</h1>
-			<a href="https://www.figma.com/file/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=2-1323&t=FAjbAeNy6MvyeytB-4"></a>
-
+		<section class="titulo-principal">
+			<h1>Encriptador de texto</h1>
 		</section>
 	</header>
-	<section>
-		
-		<textarea name="entrada" placeholder="Ingrese aqui el texto">
-		</textarea>
-		<br><br>
-		<textarea>
-			
-		</textarea>
-		<br><br>
-		<button>Encriptar</button>
-		<button>Desencriptar</button>
-	
-	</section>
+
+	<main>
+		<ul class="principal">
+			<li class="area-captura">
+					<label for="mensaje">Ingrese el mensaje aqui</label>
+					<textarea id="mensaje" cols="80" rows="20">
+					</textarea>
+			</li>
+			<li class="area-resultado">
+				<textarea id="mensaje-procesado">
+				</textarea>
+			</li>
+		</ul>
+
+		<button id="encriptar">Encriptar</button>
+		<button id="desencriptar">Desencriptar</button>
+	</main>
 
 	<footer>
 

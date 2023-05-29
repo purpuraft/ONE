@@ -1,0 +1,64 @@
+body{
+	background: #F3F5FC;
+	width: 100%;
+	margin: 1em 1em;
+	font-family: 'Heebo', sans-serif;
+	color: #0A3871;
+}
+
+.titulo-principal{
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+.principal {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 1%;
+	padding: 30px 20px;
+}
+
+ul label {
+	display: block;
+	font-size: 20px;
+	margin: 1em 10px;
+}
+
+#mensaje{
+	width: 70%;
+	border: none;
+	background: #F3F5FC;
+	display: block;
+}
+
+#mensaje-procesado{
+	width: 30%;
+	border: none;
+	border-radius: 32px;
+	display: block;
+}
+
+button{
+	border-radius: 24px;
+	display: inline-block;
+	padding: 10px 25px;
+	border-color: #244d80;
+	margin: 1em 1em;
+	align-content: center;
+}
+
+#encriptar{
+	background: #0A3871;
+	color: #ffffff;
+}
+
+#desencriptar{
+	background: #d8dfe8;
+}
