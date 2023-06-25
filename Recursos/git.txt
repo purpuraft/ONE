@@ -1,0 +1,82 @@
+git init: iniciar un repositorio en una carpeta
+git add .: agregar todos los archivos para monitorear
+git rm --cached <file>:para dejar de monitorear
+git commit -m "documentación descriptiva del commit": enviar los cambios e indicar lo que se hizo
+git config --global user.email "email@dominio.com": para configurar el usuario que envia el commit, usar local si el usuario no es el que queremos usar para todo
+git config --global user.name "nombre": para configurar el usuario que envia el commit, usar local si el usuario no es el que queremos usar para todo
+git log: historial 
+git log --oneline: ver los commit en una linea
+git log -p: historial con detalle de cada commit
+:q para salir de la visualización del historial
+git log --pretty="format:%h %s %ae": para ver un commit abreviado con el mensaje y correo del usuario
+git ignore
+mkdir <nombre>: para crear una carpeta
+git init --bare: indica que es un repositorio puro remoto
+git remote: lista todos los servidores remotos que el servidor conoce
+git remote add <nombre_servidor> <ruta>: apunta el nuevo servidor a un servidor remoto
+git clone </direccion/del/servidor/remoto/> <nombre_para_local>: copiando los datos contenidos en un servidor remoto
+git push <servidor> master: enviando los cambios a "servidor" desde origen
+git pull <servidor> <rama_a_jalar>: bajando los cambios del servidor a local, hay que indicar desde qué servidor y cual rama
+
+git checkout -b <nombre_rama>: crear una rama
+git checkout master
+git merge <rama>: une el contenido de una rama a otra pero añade commits que pueden confundir a los usuarios
+
+git rebase <rama>: une una rama a otra sin generar nuevos commits, en una única linea de commits
+
+git log --graph: presenta los comits de una forma más visual en consola de comandos
+
+--------- revirtiendo cambios ---------
+git restore <archivo>: descarta los cambios en los archivos editados no añadidos para monitoreo (deshacen modificaciones antes de agregarlas)
+
+git restore --staged <archivo>: volver a la ultima versión local después de haber añadido el archivo para monitoreo (después de agregarlas, pero antes de commitearlas)
+
+git log -> copiar hash del commit que queremos revertir -> :q para salir del log
+git revert <hash>: va a crear un nuevo commit deshaciendo los cambios que agregó el commit que indicamos (después de realizar el commit)
+
+--------- guardando para después ---------
+git status: para ver los cambios que queremos guardar para despues
+git stash: nos devuelve un hash para identificar el cambio que estamos guardando como "in progress"
+git stash list: para ver los stash guardados
+git stash pop: agregar la ultima modificacion en la carpeta para continuarla y la elimina de la lista de stash 
+git stash aply 0: toma el stash 0 y lo coloca en la carpeta para continuarlo pero no lo elimina de la lista de stash, tendría que eliminarla manualmente luego
+
+------- observando cambios en commits pasados ---
+git log --oneline
+copiar hash del commit que queremos revisar
+git checkout <hash>: comenzamos a trabajar en un estado "detached HEAD" (desanexado), es una zona experimental que no afecta a la linea de desarrollo. Si queremos mantener los cambios que hagamos deberemos meterlos en una nueva rama para luego unirla a la principal
+
+Que, para deshacer un cambio antes de agregarlo para commit(con git add), podemos usar el comando git restore <archivos>;
+Que, para deshacer un cambio después de agregarlo paracommit, primero debemos ejecutar git restore --staged <archivos> y luego podemos deshacerlos con git restore <files>;
+Que, para revertir los cambios realizados en un commit, el comando git revert puede ser la solución;
+Que el comando git revert genera un nuevo commit informando que los cambios fueron deshechos;
+Que, para guardar un trabajo y reanudarlo más tarde, podemos usar git stash;
+Que, para ver qué cambios hay en el stash, podemos usar el comando git stash list;
+Que, con el comando git stash apply <número>, podemos aplicar un cambio específico al stash;
+Que el comando git stash drop <número> elimina un elemento determinado del stash;
+Que el comando git stash pop aplica y elimina el último cambio que se agregó alstash;
+Que git checkout sirve para dejar la copia del código de nuestra aplicación en el estado que queremos:
+git checkout <branch> deja el código en el estado de una branchcon el nombre <branch>;
+git checkout <hash> deja el código en el estado de commit con el hash <hash>.
+ 
+git diff <hash>..<hash>: muestra la diferencia entre cambios
+
+si hay cambios que no han sido agregados a stage git diff mostrará esos cambios
+
+------------------ Tags ------------------
+Sirven para definir un punto que nunca más va cambiar, es decir una versión, los posteriores cambios que se hagan formarían parte de una siguiente versión
+
+git tag -a <nombre_tag> -m "mensaje de versionamiento": generar un tag marcando una versión estable, asignandole un nombre y un mensaje de versión
+git tag: muestra las tags creadas
+git push <servidor> <nombre_tag>: enviando la tag al servidor, generará una release con lo que podremos descargar el código empaquetado en un zip
+
+Que es posible ver qué cambios se hicieron en cada archivo, con el comando git diff;
+Que, al escribir solo git diff, vemos los cambios en nuestros archivos que no se agregaron para commit (con git add);
+Que es posible comparar cambios entre dos ramas con git diff <branch1> .. <branch2>
+Que es posible comparar los cambios realizados entre un commit y otro, usando el comando git diff <commit1> .. <commit2>;
+Que Git nos permite guardar “marcos” de nuestra aplicación, por ejemplo, generando versiones, a través de git tag;
+Que el comando git tag -a se usa para generar una nueva tag;
+Las Releases de GitHub, que son generadas para cada tag de Git que creamos en nuestro repositorio.
+
+
+
